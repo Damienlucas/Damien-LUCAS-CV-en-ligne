@@ -9,7 +9,7 @@ header{
     z-index: 99;
 }
 
-@media(min-width: 1200px){
+@media(min-width: 768px){
     .navbar-expand-lg, .navbar-light, .navbar, .bg-light, .container-fluid, .navbar-nav{
         display: flex;
         flex-direction: column !important;
@@ -17,5 +17,6 @@ header{
     header{
         position: fixed;
         top: 0;
+        margin-top: 0;
     }
 }
