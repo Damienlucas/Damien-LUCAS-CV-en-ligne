@@ -1,5 +1,21 @@
-*{
+*, .row {
     margin: 0;
     padding: 0;
 }
-/* ---------------------------------------règles générales-------------------------------------------- */
+header{
+    
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+
+@media(min-width: 1200px){
+    .navbar-expand-lg, .navbar-light, .navbar, .bg-light, .container-fluid, .navbar-nav{
+        display: flex;
+        flex-direction: column !important;
+    }
+    header{
+        position: fixed;
+        top: 0;
+    }
+}
