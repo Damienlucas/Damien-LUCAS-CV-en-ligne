@@ -10,7 +10,7 @@
     </head>
     <body>
         <section class="row">
-            <header class="col-11 order-2 order-md-1 col-md-3">
+            <header class="col-12 order-2 order-md-1 col-md-3">
                 <div>
                     <h2>Damien LUCAS</h2>
                     <h3>Concepteur / Designer en devenir</h3>
@@ -18,7 +18,11 @@
                 </div>
                 <nav class="navbar navbar-expand-md navbar-light bg-light">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand center-center" href="#" title="Retour haut de page">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
                                 <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
                             </svg>
@@ -28,38 +32,38 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#a-propos" title="Se déplacer à la section A propos du site">
+                                <li class="nav-item nav-effe">
+                                    <a class="nav-link center-center" aria-current="page" href="#a-propos" title="Se déplacer à la section A propos du site">
                                         A propos
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#competences" title="Se déplacer à la section Compétences du site">
+                                    <a class="nav-link center-center" href="#competences" title="Se déplacer à la section Compétences du site">
                                         Compétences
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#portfolio" title="Se déplacer à la section à Portfolio du site">
+                                    <a class="nav-link center-center" href="#portfolio" title="Se déplacer à la section à Portfolio du site">
                                         Portfolio
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#diplomes" title="Se déplacer à la section Diplômes du site">
+                                    <a class="nav-link center-center" href="#diplomes" title="Se déplacer à la section Diplômes du site">
                                         Diplômes
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#experiences" title="Se déplacer à la section Expériences du site">
+                                    <a class="nav-link center-center" href="#experiences" title="Se déplacer à la section Expériences du site">
                                         Expériences
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#centres-interet" title="Se déplacer à la section Centres d'intérêt du site">
+                                    <a class="nav-link center-center" href="#centres-interet" title="Se déplacer à la section Centres d'intérêt du site">
                                         Centres d'intérêt
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" target="_blank" rel="noopener noreferrer" title="Télécharger mon CV au format PDF" href="./Documents/CV de Damien LUCAS.pdf">
+                                    <a class="nav-link center-center" target="_blank" rel="noopener noreferrer" title="Télécharger mon CV au format PDF" href="./Documents/CV de Damien LUCAS.pdf">
                                         Télécharger le CV
                                     </a>
                                 </li>
@@ -67,14 +71,12 @@
                                     <a class=" nav-link btn" data-bs-toggle="offcanvas" href="#offcanvasRight" role="button" aria-controls="offcanvasRight">
                                         Me contacter
                                     </a>
-                                    
                                 </li>      
                             </ul>
                             
                         </div>
                     </div>
-                </nav>
-                
+                </nav> 
             </header>
 <!-- -----------------------------------Offcanvas------------------------------------------ -->
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -212,7 +214,7 @@
                 </div>
             </div>
 <!-----------------------------------Fin Offcanvas--------------------------------->
-            <div class="col-11 order-1 order-md-2 offset-md-3 col-md-9">
+            <div class="col-12 order-1 order-md-2 offset-md-3 col-md-9">
                 <div class="row">
                     <div class="col-12" id="en-tete">
                         <div class="row">
@@ -226,10 +228,41 @@
                     </div>
                     <div class="col-12" id="a-propos">
                         <div class="row">
-                            <div class="col-4">
-                                <img src="" alt="MOI">
+                            <div class="col-11 col-md-4">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="./images/a propos/cranium-2028555.svg" class="card-img-top" alt="Point d'interrogation" id="cranium">
+                                    <div class="card-body column-center">
+                                        <h5 class="card-title"></h5>
+                                        <p class="card-text">
+                                            Vous souhaitez lever le mystère ?
+                                        </p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            Appuyez ici !
+                                        </button>
+                                        <!-- Modal -->
+                                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                                        </button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        ...
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                                            Fermer
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-7">
+                            <div class="col-11 col-md-7">
                                 <h2>A propos</h2>
                                 <p>
                                     Après deux ans de reprise d’études pour une reconversion professionnelle, j'ai souhaité me diriger vers le domaine qui me passionne depuis longtemps: le développement web. Je suis aujourd'hui en prequal blablabla
@@ -241,11 +274,11 @@
                     <div class="col-12" id="competences">
                         <div class="row">
                             <h2>Compétences</h2>
-                            <div class="col-11 center-center">
+                            <div class="col-12 center-center">
                                 <h3>Compétences WEB et bureautique</h3>
                                 <img src="./images/competences/decor/front-end.svg" alt="Image illustrant le front-end" class="decor-competences">
                             </div>
-                            <div class="col-11 col-md-5">
+                            <div class="col-12 col-md-6 box-competences" id="front-end">
                                 <h4>Front End</h4>
                                 <div class="flex-between-center">
                                     <img src="./images/competences/html5.svg" alt="Logo Html5" class="competences-img">
@@ -275,7 +308,7 @@
                                 <div class="flex-between-center">
                                     <img src="./images/competences/bootstrap-4-logo.svg" alt="Logo Bootstrap" class="competences-img">
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" id="progress-bootstrap">
                                             BOOTSTRAP
                                         </div>
                                     </div>
@@ -287,7 +320,7 @@
                             <!-- <div class="col-5 no-mobile">
                                 <img src="./images/competences/decor/CMS.svg" alt="Image illustrant le CMS" class="decor-competences">
                             </div> -->
-                            <div class="col-11 offset-md-5 col-md-5">
+                            <div class="col-12 offset-md-6 col-md-6 box-competences">
                                 <h4>CMS</h4>
                                 <div class="flex-between-center">
                                     <div>
@@ -315,7 +348,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-11 col-md-5">
+                            <div class="col-12 col-md-6 box-competences">
                                 <h4>Web Design</h4>
                                 <div class="flex-between-center">
                                     <img src="./images/competences/photoshop-cc-logo.svg" alt="Logo Adobe photoshop" class="competences-img">
@@ -328,7 +361,7 @@
                                 <div class="flex-between-center">
                                     <img src="./images/competences/adobe-illustrator-cc-logo.svg" alt="Logo Adobe Ilustrator" class="competences-img">
                                     <div class="progress">
-                                        <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" id="progress-ilustrator">
                                             ILUSTRATOR
                                         </div>
                                     </div>
@@ -340,7 +373,7 @@
                             <div class="col-5 no-mobile">
                                 <img src="./images/competences/decor/environnement.svg" alt="Image illustrant le digital" class="decor-competences">
                             </div> -->
-                            <div class="col-11 offset-md-5 col-md-5">
+                            <div class="col-12 offset-md-6 col-md-6 box-competences">
                                 <h4>Environnement de travail</h4>
                                 <p>
                                     <img src="./images/competences/vs-code.svg" alt="logo Visual studio" class="competences-img">
@@ -361,7 +394,7 @@
                                     Outil de gestion de projet : Trello
                                 </p>
                             </div>
-                            <div class="col-11 col-md-5">
+                            <div class="col-12 col-md-6 box-competences">
                                 <h4>Bureautique</h4>
                                 <div class="flex-between-center">
                                     <div>
@@ -467,10 +500,10 @@
                             <!-- <div class="col-5 no-mobile">
                                 <img src="./images/competences/decor/bureautique.svg" alt="Image illustrant les logiciels de bureautique" class="decor-competences">
                             </div> -->
-                            <div class="col-11 center-center">
+                            <div class="col-12 center-center">
                                 <img src="./images/competences/decor/skills-2.svg" alt="Illustration presentant des soft skills" class="">
                             </div>
-                            <div class="col-11 col-md-5">
+                            <div class="col-12 col-md-5 box-competences box-competences-2">
                                 <h3>Compétences transverses</h3>
                                 <ul>
                                     <li>
@@ -496,7 +529,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-11 col-md-5">
+                            <div class="col-12 col-md-5 box-competences box-competences-2">
                                 <h3>Soft Skills</h3>
                                 <ul>
                                     <li>
@@ -529,9 +562,9 @@
                     </div>
                     <div class="col-11" id="diplomes">
                         <div class="row">
-                            <h2>Diplômes</h2>
+                            <h2>Formations et Diplômes</h2>
                             
-                           
+                            
                         </div>
                     </div>
                     <div class="col-11" id="experiences">
