@@ -16,6 +16,9 @@ html{
 .italic{
     font-style: italic;
 }
+.justify{
+    text-align: justify;
+}
 .bold{
     font-weight: bold;
 }
@@ -39,6 +42,15 @@ html{
     align-items: center;
     justify-content: center;
 }
+h1{
+    padding: 20px 0 0;
+}
+h2{
+    padding: 20px 0;
+}
+h3{
+    padding-bottom: 15px;
+}
 /* ---------------------------------------------------header------------------------------------------------------- */
 header{
     position: fixed;
@@ -46,6 +58,9 @@ header{
     z-index: 99;
     background-color: black;
     color: white;
+}
+.p-ouverture{
+    padding: 10px 0;
 }
 /* --------------------------------------------------Navbar-------------------------------------------------------- */
 .navbar-brand{
@@ -115,13 +130,16 @@ header{
 }
 
 /* -------------------------------------------------A propos------------------------------------------------------- */
-.card{
+/* .card{
     width: 100% !important;
-}
+} */
 #cranium{
-    width: 100%;
+    width: 30%;
     height: auto;
     animation: clignote 8s linear infinite;
+}
+.p-a-propos{
+    margin-bottom: 30px;
 }
 /* --------------------------------------------compétences--------------------------------------------------------- */
 #competences{
@@ -131,12 +149,12 @@ header{
     background-color: white;
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.16);
     border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
     padding: 15px;
 }
-.box-competences-2{
-    margin: 10px auto;
+.box-soft-skills{
+    margin-bottom: 35px;
 }
 #progress-bootstrap{
     background-color: rgb(161, 83, 240);
@@ -159,12 +177,66 @@ header{
     margin-left: 5px;
 }
 .decor-competences{
-    width: 100%;
+    width: 50%;
     height: auto;
     display: none;
+    border-radius: 15px;
 }
-.no-mobile{
-    display: none;
+#img-skills{
+    width: 100%;
+    height: auto;
+}
+#skills-img-assesfirst{
+    width: 60px;
+    height: auto;
+}
+#img-bootstrap{
+    width: 44px;
+    height: auto;
+    margin-left: 3px;
+}
+.img-cms{
+    width: 50px;
+    height: auto;
+}
+.img-web-design{
+    width: 36px;
+    height: 36px;
+}
+.img-bureautique{
+    width: 60px;
+    height: auto;
+}
+#img-adobe-acrobat{
+    width: 42px;
+    height: auto;
+    margin-left: 10px;
+}#img-visual-studio{
+    width: 60px;
+    height: auto;
+}
+#img-competences-github{
+    margin-left: 12px;
+}
+#img-whimsical{
+    width: 34px;
+    height: auto;
+    margin-left: 12px;
+}
+#img-trello{
+    width: 32px;
+    height: auto;
+    margin-left: 12px;
+}
+.div-icone-bureautique{
+    height: 42px;
+    margin-bottom: 5px;
+}
+#competences span{
+    font-size: 0.7rem;
+}
+.environnement-span{
+    padding-left: 12px;
 }
 /* ---------------------------------------------------Portfolio---------------------------------------------------- */
 
@@ -183,6 +255,15 @@ footer{
     background-color: black;
     color: white;
 }
+#footer-icone{
+    margin: 20px 0 10px 0;
+}
+#footer-icone-imprimante{
+    margin-left: 8px;
+}
+#footer-icone-linkedin{
+    margin-right: 8px;
+}
 /* -----------------------------------------------Animations---------------------------------------------------- */
 @keyframes clignote {
     0%{
@@ -197,14 +278,45 @@ footer{
 }
 /* ---------------------------------media querry----------------------------------------------------------------- */
 @media(min-width: 768px){
+    h1{
+        padding: 30px 0 0;
+    }
+    .p-ouverture{
+        padding: 20px 0;
+    } 
+    #competences span{
+        font-size: 0.9rem;
+    }
+    #adobe-span{
+        padding-left: 8px;
+    }
+}
+@media(min-width: 992px){
+    .p-a-propos{
+        margin-bottom: 0;
+    }
+    .img-cms{
+        width: 60px;
+        height: auto;
+    }
     .container-fluid{
         flex-direction: column;
+    }
+    .decor-competences{
+        display: block;
     }
     header{
         position: fixed;
         top: 0;
         margin-top: 0;
     }
-    .decor-competences{
-        display: block;
+    .box-competences-2{
+        margin: 30px auto;
+    }
+}
+@media(min-width: 1200px){
+    
+}
+@media(min-width: 1400px){
+
 }
