@@ -42,6 +42,11 @@ html{
     align-items: center;
     justify-content: center;
 }
+.flex-start-center{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
 h1{
     padding: 20px 0 0;
 }
@@ -51,6 +56,15 @@ h2{
 h3{
     padding-bottom: 15px;
 }
+#div-col-corps{
+    padding-left: 0;
+    padding-right: 0;
+}
+.no-mobile{
+    display: none;
+}
+/* --------------------------------------------------animations liens------------------------------------------------ */
+
 /* ---------------------------------------------------header------------------------------------------------------- */
 header{
     position: fixed;
@@ -122,6 +136,9 @@ header{
     bottom: 100%;
     transition: 1s;
     transition-delay: 0.75s;
+}
+#h2-nav{
+    padding: 8px 0;
 }
 /* -------------------------------------------------En-tête------------------------------------------------------- */
 #en-tete{
@@ -237,12 +254,58 @@ header{
 }
 .environnement-span{
     padding-left: 12px;
+}#competences a{
+    color: var(--main-color);
+}
+#competences a:hover{
+    color: var(--second-color);
 }
 /* ---------------------------------------------------Portfolio---------------------------------------------------- */
 
 /* -------------------------------------------------Formations et Diplomes--------------------------------------- */
 #diplomes{
     background-color: #EBEBEB;
+}
+#logo-online{
+    width: 80px;
+    height: auto;
+    margin-left: 20px;
+}
+.img-calendrier{
+    width: 25px;
+    height: auto;
+}
+.diplome-p-intro{
+    font-size: 0.8rem;
+}
+.diplome-p-intro span{
+    margin: 0 4px;
+}
+#diplomes a{
+    color: var(--main-color);
+}
+#diplomes a:hover{
+    color: var(--second-color);
+}
+.diplome-logo{
+    transition: 1s;
+}
+.diplome-logo:hover{
+    transform: scale(1.4);
+    transition: 1s;
+}
+#logo-IUT{
+    width: 60px;
+    height: auto;
+    margin-left: 20px;
+}
+#logo-ENILV{
+    width: 60px;
+    height: auto;
+    margin-left: 20px;
+}
+#IUT a,#ENILV-1 a,#ENILV-2 a{
+    padding: 15px 0;
 }
 /* -------------------------------------------------Experiences------------------------------------------------- */
 
@@ -278,6 +341,9 @@ footer{
 }
 /* ---------------------------------media querry----------------------------------------------------------------- */
 @media(min-width: 768px){
+    #h2-nav{
+        padding: 20px 0;
+    }
     h1{
         padding: 30px 0 0;
     }
@@ -292,6 +358,12 @@ footer{
     }
 }
 @media(min-width: 992px){
+    .no-mobile{
+        display: block;
+    }
+    #h2-nav{
+        padding: 30px 0;
+    }
     .p-a-propos{
         margin-bottom: 0;
     }
