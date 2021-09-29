@@ -308,7 +308,105 @@ header{
     padding: 15px 0;
 }
 /* -------------------------------------------------Experiences------------------------------------------------- */
-
+.box-timeline{
+    width: 100%;
+    padding: 20px 0 250px 0;
+    margin-bottom: 100px;
+    position: relative;
+}
+.ligne{
+    height: 1000px;
+    width: 8px;
+    margin: 0 0 0 10px;
+    background: var(--main-color);
+}
+.rond{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--main-color);
+    position: absolute;
+    border: 1px solid var(--main-color);
+    left: 13px;
+    transform: translate(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.r1{
+    top: 20px;
+    color: white;
+}
+.r2{
+    top: 386px;
+    color: white;
+}
+.r3{
+    top: 692px;
+    color: white;
+}
+.r4{
+    top: 1000px;
+    color: white;
+}
+.box{
+    color: var(--main-color);
+    width: 85%;
+    padding: 12px;
+    border-radius: 10px;
+    height: auto;
+    background: var(--second-color);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+    position: absolute;
+    transform: translate(-50%);
+    left: calc(50% + 21px);
+}
+.b1{
+    top: 20px;
+}
+.b2{
+    top: 386px;
+}
+.b3{
+    top: 692px;
+}
+.b4{
+    top: 1000px;
+}
+.experiences-p-intro{
+    font-size: 0.7rem;
+}
+.experiences-p-intro span{
+    margin: 0 2px;
+}
+#experiences a{
+    color: var(--main-color);
+    margin-left: 3px;
+}
+#experiences a:hover{
+    color: white;
+}
+#experiences-img-calendar{
+    width: 22px;
+    height: auto;
+}
+#logo-stef{
+    margin-left: 15px;
+    width: 60px;
+}
+.experiences-logo{
+    transition: 1s;
+}
+.experiences-logo:hover{
+    transform: scale(1.4);
+    transition: 1s;
+}
+#experiences h4{
+    font-size: 1rem;
+}
+.experiences-corps{
+    font-size: 0.8rem;
+}
 /* -----------------------------------------------Centres d'intérêt--------------------------------------------- */
 #centres-interet{
     background-color: #EBEBEB;
@@ -323,6 +421,7 @@ footer{
 }
 #footer-icone-imprimante{
     margin-left: 8px;
+    color: white;
 }
 #footer-icone-linkedin{
     margin-right: 8px;
@@ -356,6 +455,38 @@ footer{
     #adobe-span{
         padding-left: 8px;
     }
+    .box{
+        padding: 15px;
+    }
+    .ligne{
+        margin: 0 0 0 20px;
+    }
+    .rond{
+        left: 24px;
+        width: 55px;
+        height: 55px;
+    }
+    .experiences-p-intro{
+        font-size: 0.8rem;
+    }
+    .experiences-p-intro span{
+        margin: 0 4px;
+    }
+    #experiences-wallet{
+        width: 28px;
+        height: 28px;
+    }
+    #experiences h4{
+        font-size: 1.2rem;
+    }
+    .experiences-corps{
+        font-size: 1rem;
+    }
+    #logo-stef{
+        width: 80px;
+        height: auto;
+        margin-left: 20px;
+    }
 }
 @media(min-width: 992px){
     .no-mobile{
@@ -385,10 +516,56 @@ footer{
     .box-competences-2{
         margin: 30px auto;
     }
+    .box-timeline{
+        padding:80px 0 250px 0;
+    }
+    .box{
+        width: 42%;
+    }
+    .ligne{
+     position: initial;
+     margin: 0 auto;
+    }
+    .rond{
+        width: 60px;
+        height: 60px;
+        left: 50%;
+        font-size: 30px;
+    }
+    .b1{
+        left: calc(50% - 27%);
+    }
+    .b2{
+        left: calc(50% + 27%);
+    }
+    .b3{
+        left: calc(50% - 27%);
+    }
+    .b4{
+        left: calc(50% + 27%);
+    }
+    #experiences h4{
+        font-size: 1.2rem;
+    }
+    #logo-stef{
+        width: 60px;
+        height: auto;
+        margin-left: 20px;
+    }
 }
 @media(min-width: 1200px){
-    
+    #experiences h4{
+        font-size: 1.5rem;
+    }
+    .experiences-corps{
+        font-size: 1.1rem;
+    }
+    #logo-stef{
+        width: 80px;
+        height: auto;
+        margin-left: 25px;
+    }
 }
 @media(min-width: 1400px){
-
+     
 }
