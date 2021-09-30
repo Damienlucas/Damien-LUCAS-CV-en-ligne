@@ -3938,11 +3938,13 @@ textarea.form-control-lg {
   background: none;
   border: 0;
   border-radius: 0.25rem;
+  color: black;
+  width: 200px;
 }
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #0d6efd;
+  background-color: var(--main-color);
 }
 
 .nav-fill > .nav-link,
@@ -4119,10 +4121,10 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 768px) {
-  .navbar-expand-md {
-    /* flex-wrap: nowrap;
-    justify-content: flex-start; */
-  }
+  /* .navbar-expand-md {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  } */
   .navbar-expand-md .navbar-nav {
     flex-direction: row;
     /* flex-direction: column; */
@@ -4181,9 +4183,9 @@ textarea.form-control-lg {
     /* flex-wrap: nowrap;
     justify-content: flex-start; */
   }
-  .navbar-expand-lg .navbar-nav {
-    /* flex-direction: row; */
-  }
+  /* .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+  } */
   .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
   }
@@ -5530,10 +5532,14 @@ textarea.form-control-lg {
   border-bottom: 1px solid #dee2e6;
   border-top-left-radius: calc(0.3rem - 1px);
   border-top-right-radius: calc(0.3rem - 1px);
+  background: var(--main-color);
+  color: white;
 }
 .modal-header .btn-close {
   padding: 0.5rem 0.5rem;
   margin: -0.5rem -0.5rem -0.5rem auto;
+  color: white;
+  background-color: white;
 }
 
 .modal-title {
@@ -5557,6 +5563,7 @@ textarea.form-control-lg {
   border-top: 1px solid #dee2e6;
   border-bottom-right-radius: calc(0.3rem - 1px);
   border-bottom-left-radius: calc(0.3rem - 1px);
+  background: var(--main-color);
 }
 .modal-footer > * {
   margin: 0.25rem;

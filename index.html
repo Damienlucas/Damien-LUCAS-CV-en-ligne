@@ -376,6 +376,12 @@
                             <div class="col-12 offset-lg-6 col-lg-6 box-competences">
                                 <h4 class="text-center">Environnement de travail</h4>
                                 <p>
+                                    <img src="./images/competences/windows.svg" alt="logo Windows" id="img-windows">
+                                    <span>
+                                        Système d'exploitation : Windows
+                                    </span>
+                                </p>
+                                <p>
                                     <img src="./images/competences/vs-code.svg" alt="logo Visual studio" id="img-visual-studio">
                                     <span>
                                         IDE : Visual Studio Code
@@ -572,8 +578,98 @@
                     <div class="col-12" id="portfolio">
                         <div class="row">
                             <h2 class="text-center">Portfolio</h2>
+                            <ul class="nav nav-pills mb-3 center-center" id="pills-tab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="pills-projets-persos-tab" data-bs-toggle="pill" data-bs-target="#pills-projets-persos" type="button" role="tab" aria-controls="pills-projets-persos" aria-selected="true">
+                                        Projets Persos
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-petites-animations-tab" data-bs-toggle="pill" data-bs-target="#pills-petites-animations" type="button" role="tab" aria-controls="pills-petites-animations" aria-selected="false">
+                                        Petites Animations
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="pills-photoshop-tab" data-bs-toggle="pill" data-bs-target="#pills-photoshop" type="button" role="tab" aria-controls="pills-photoshop" aria-selected="false">
+                                        Photoshop
+                                    </button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-projets-persos" role="tabpanel" aria-labelledby="pills-projets-persos-tab">
+                                    ...
+                                </div>
+                                <div class="tab-pane fade" id="pills-petites-animations" role="tabpanel" aria-labelledby="pills-petites-animations-tab">
+                                    <div class="row center-center">
+                                        <div class="col-10 col-md-6 col-xl-4 grayscale">
+                                            <a class="btn" data-bs-toggle="modal"data-bs-target="#Cercle-multi-color">
+                                                <img src="./images/portfolio/Capture cercle multi-color.PNG" alt="Capture écran de l'animation cercle multi-color">
+                                            </a>
+                                        </div>
+                                        <div class="col-10 col-md-6 col-xl-4 grayscale">
+                                            <a class="btn" data-bs-toggle="modal"data-bs-target="#Spinner-animation">
+                                                <img src="./images/portfolio/Capture animation spinner.PNG" alt="Capture écran de l'animation spinner">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="pills-photoshop" role="tabpanel" aria-labelledby="pills-photoshop-tab">
+                                    ...
+                                </div>
+                            </div>
                         </div>
                     </div>
+<!-------------------------------------------Modals portfolio------------------------->
+                    <div class="modal fade" id="Cercle-multi-color" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">
+                                        Déformation de cercle multi-color
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                    </button>
+                                </div>
+                                <div class="modal-body" id="modal-body-cercle-multi">
+                                    <div class="box-cercle-multi">
+                                        <div class="circle"></div>
+                                            <p>CHOOSE</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="Spinner-animation" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">
+                                        Animation spinner
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                                    </button>
+                                </div>
+                                <div class="modal-body" id="modal-body-Spinner-animation">
+                                    <div class="container-loader">
+                                        <div class="loader">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                        Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-- --------------------------------Fin Modals Portfolio -------------------->
                     <div class="col-12" id="diplomes">
                         <div class="row">
                             <h2 class="text-center">Formations et Diplômes</h2>

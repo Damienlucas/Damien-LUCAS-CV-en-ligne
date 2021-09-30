@@ -240,6 +240,9 @@ header{
 #competences{
     background-color: #EBEBEB;
 }
+#competences h4{
+    margin-bottom: 12px;
+}
 .box-competences{
     background-color: white;
     box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.16);
@@ -306,7 +309,14 @@ header{
     width: 42px;
     height: auto;
     margin-left: 10px;
-}#img-visual-studio{
+}
+#img-windows{
+    width: 30px;
+    height: auto;
+    margin-left: 14px;
+    margin-right: 15px;
+}
+#img-visual-studio{
     width: 60px;
     height: auto;
 }
@@ -339,6 +349,159 @@ header{
     color: var(--second-color);
 }
 /* ---------------------------------------------------Portfolio---------------------------------------------------- */
+.grayscale a img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    width: 150px;
+    height: 250px;
+    padding: 50px 0;
+}
+.grayscale a:hover img {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+    transform: scale(1.5);
+    transition: 1s;
+}
+    /* ---------------------------animation modal cercle multi-color------------------------- */
+    #modal-body-cercle-multi{
+        background: #282937;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    .box-cercle-multi{
+        position: relative;
+        color: #f1f1f1;
+        cursor: pointer;
+        transition: transform 0.4s
+        cubic-bezier(0.23,1.83,0.42,1.19);
+    }
+    .box-cercle-multi:hover{
+        transform: scale(1.2);
+    }
+    .box-cercle-multi p{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 20px;
+        letter-spacing: 3px;
+    }
+    .circle{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 3px solid #f1f1f1;
+        animation: 1s linear infinite alternate boxmagic,
+                    4s linear infinite spinning;
+        padding-top: 240px;
+    }
+    @keyframes boxmagic {
+        from {
+            box-shadow: 
+            0 0 0#feac5e,
+            0 0 0#c779d0,
+            0 0 0#4bc0c8,
+            0 0 0#42db75;
+        }
+        to {
+            box-shadow: 
+            0 -10px 0#feac5e,
+            -10px 0 0#c779d0,
+            0 10px 0#4bc0c8,
+            10px 0 0#42db75;
+        }
+    }
+    @keyframes spinning {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    /* -----------------------------------Fin animation modal cercle multi-color------------------------ */
+    /* -------------------------------------Animation modal Spinner--------------------------------------- */
+#modal-body-Spinner-animation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #102626;
+}
+.container-loader{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-box-reflect: below 1px linear-gradient(#0001,#0004);
+}
+.container-loader .loader{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: #0d2323;
+    animation: animate 2s linear infinite;
+}
+@keyframes animate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container-loader .loader::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top, transparent, rgba(0,255,249,0.4));
+    background-size: 100px 180px;
+    background-repeat: no-repeat;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.container-loader .loader::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: #00fff9;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 10px #00fff9,
+                0 0 20px #00fff9,
+                0 0 30px #00fff9,
+                0 0 40px #00fff9,
+                0 0 50px #00fff9,
+                0 0 60px #00fff9,
+                0 0 70px #00fff9,
+                0 0 80px #00fff9,
+                0 0 90px #00fff9,
+                0 0 100px #00fff9;
+}
+.container-loader .loader span{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 50%;
+    background: #102626;
+}
+    /* -------------------------Fin animation modal spinner---------------------------------------------------------- */
 
 /* -------------------------------------------------Formations et Diplomes--------------------------------------- */
 #diplomes{
@@ -561,6 +724,14 @@ footer{
     }
     h1{
         padding: 30px 0 0;
+    }
+    .box-cercle-multi p{
+        font-size: 25px;
+    }
+    .circle{
+        width: 320px;
+        height: 320px;
+        padding-top: 340px;
     }
     .slide-line::before{
         width: 77%;
