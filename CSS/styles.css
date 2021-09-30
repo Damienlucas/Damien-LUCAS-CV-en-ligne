@@ -47,6 +47,11 @@ html{
     align-items: center;
     justify-content: flex-start;
 }
+.flex-around-center{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 h1{
     padding: 20px 0 0;
 }
@@ -349,19 +354,76 @@ header{
     color: var(--second-color);
 }
 /* ---------------------------------------------------Portfolio---------------------------------------------------- */
+#portfolio{
+    padding-bottom: 30px;
+}
+    /* -----------------------------------------overlay------------------------------------------------------------- */
+.portfolio-overlay{
+    position: relative;
+    padding: 0;
+    margin: 10px auto;
+}
+.portfolio-overlay img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.overlay{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    background: var(--second-color);
+    overflow: hidden;
+    transition: 0.5s ease;
+    border-radius: 10px;
+}
+.overlay h5{
+    margin: 5px 0;
+    font-size: 0.8rem;
+}
+.overlay-sticker span{
+    background: white;
+    border-radius: 10px;
+    padding: 6px;
+    margin: 6px 10px;
+    font-size: 0.7rem;
+}
+.overlay p{
+    margin: 2px auto 0;
+    font-size: 0.7rem;
+}
+.projet-persos-a{
+    margin-top: 4px;
+    background: var(--main-color);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.7rem;
+} 
+.projet-persos-a:hover{
+    color: black;
+    background: white;
+    box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.16);
+}
+.portfolio-overlay:hover .overlay{
+    height: 80%;
+}
+    /* -----------------------------------------fin overlay----------------------------------------------------------- */
 .grayscale a img {
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
 	-webkit-transition: .3s ease-in-out;
 	transition: .3s ease-in-out;
-    width: 150px;
+    width: 250px;
     height: 250px;
-    padding: 50px 0;
 }
 .grayscale a:hover img {
 	-webkit-filter: grayscale(0);
 	filter: grayscale(0);
-    transform: scale(1.5);
     transition: 1s;
 }
     /* ---------------------------animation modal cercle multi-color------------------------- */
@@ -718,12 +780,54 @@ footer{
     }
 }
 /* ---------------------------------media querry----------------------------------------------------------------- */
+@media(min-width: 500px){
+    .overlay{
+        height: 12%;
+    }
+    .overlay h5{
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+    .overlay-sticker span{
+        padding: 10px;
+        font-size: 0.8rem;
+        margin: 15px 10px;
+    }
+    .overlay p{
+        margin: 6px auto 0;
+        font-size: 0.8rem;
+    }
+    .projet-persos-a{
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+}
 @media(min-width: 768px){
     #h2-nav{
         padding: 20px 0;
     }
     h1{
         padding: 30px 0 0;
+    }
+    .portfolio-overlay{
+        margin: 0 auto;
+    }
+    .overlay h5{
+        font-size: 1rem;
+        margin-top: 4px;
+    }
+    .overlay-sticker span{
+        padding: 8px;
+        font-size: 0.8rem;
+        margin: 8px 10px;
+    }
+    .overlay p{
+        margin: 2px auto 0;
+        font-size: 0.8rem;
+    }
+    .projet-persos-a{
+        margin-top: 6px;
+        font-size: 0.8rem;
     }
     .box-cercle-multi p{
         font-size: 25px;
@@ -912,6 +1016,19 @@ footer{
     }
 }
 @media(min-width: 1200px){
+    .overlay-sticker span{
+        padding: 8px;
+        font-size: 0.9rem;
+        margin: 15px 10px;
+    }
+    .overlay p{
+        margin: 6px auto 0;
+        font-size: 0.9rem;
+    }
+    .projet-persos-a{
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
     #experiences h4{
         font-size: 1.3rem;
     }
@@ -956,6 +1073,22 @@ footer{
     }
 }
 @media(min-width: 1400px){
+    .overlay h5{
+        font-size: 1.3rem;
+    }
+    .overlay-sticker span{
+        margin: 15px 10px;
+        font-size: 1rem;
+    }
+    .overlay p{
+        margin: 6px auto 0;
+        font-size: 1rem;
+    }
+    .projet-persos-a{
+        margin-top: 18px;
+        font-size: 1rem;
+        padding: 15px;
+    }
     #logo-metro{
         width: 65px;
         height: auto;
