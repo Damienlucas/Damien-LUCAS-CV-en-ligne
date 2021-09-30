@@ -241,6 +241,23 @@ header{
 .p-a-propos{
     margin-bottom: 30px;
 }
+#btn-a-propos{
+    background: var(--main-color);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+#btn-a-propos:hover{
+    background: var(--second-color);
+    color: black;
+    padding: 10px;
+}
+.accordion-a{
+    color: black;
+}
+.accordion-a:hover{
+    color: var(--second-color);
+}
 /* --------------------------------------------compétences--------------------------------------------------------- */
 #competences{
     background-color: #EBEBEB;
@@ -564,6 +581,54 @@ header{
     background: #102626;
 }
     /* -------------------------Fin animation modal spinner---------------------------------------------------------- */
+    /* --------------------------------animation hover rectangle qui se ferme------------------------------------------- */
+.data-container{
+    background:#ffebee;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.data-container-btn{
+cursor:pointer;
+    position:relative;
+    padding:10px 20px;
+    background:white;
+    font-size:28px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius:10px;
+    transition:all 1s;
+}
+.data-container-btn:after, .data-container-btn:before{
+    content:" ";
+    width:15px;
+    height:15px;
+    position:absolute;
+    border :0px solid #fff;
+    transition:all 1s;
+}
+.data-container-btn:after{
+    top:-1px;
+    left:-1px;
+    border-top:5px solid black;
+    border-left:5px solid black;
+}
+.data-container-btn:before{
+    bottom:-1px;
+    right:-1px;
+    border-bottom:5px solid black;
+    border-right:5px solid black;
+}
+.data-container-btn:hover{
+    border-top-right-radius:0px;
+    border-bottom-left-radius:0px;
+
+    }
+.data-container-btn:hover:before, .data-container-btn:hover:after{
+    width:100%;
+    height:100%;
+}
+    /* ----------------------------------------------fin animation hover rectangle qui se ferme------------------------- */
 
 /* -------------------------------------------------Formations et Diplomes--------------------------------------- */
 #diplomes{
@@ -810,7 +875,7 @@ footer{
         padding: 30px 0 0;
     }
     .portfolio-overlay{
-        margin: 0 auto;
+        margin: 10px auto;
     }
     .overlay h5{
         font-size: 1rem;
@@ -1085,7 +1150,7 @@ footer{
         font-size: 1rem;
     }
     .projet-persos-a{
-        margin-top: 18px;
+        margin-top: 15px;
         font-size: 1rem;
         padding: 15px;
     }
