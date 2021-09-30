@@ -64,7 +64,85 @@ h3{
     display: none;
 }
 /* --------------------------------------------------animations liens------------------------------------------------ */
-
+.lien-decor{
+    position: relative;
+    overflow: hidden;
+}
+.lien-decor:hover{
+    border: none;
+    border-radius: 20px;
+}
+.lien-decor span{
+    position: absolute;
+    display: block;
+}
+.lien-decor span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,white);
+}
+.lien-decor:hover span:nth-child(1){
+    left: 100%;
+   transition: 1s;
+}
+.lien-decor span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,white);
+}
+.lien-decor:hover span:nth-child(3){
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+.lien-decor span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,white);
+}
+.lien-decor:hover span:nth-child(2){
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+.lien-decor span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,white);
+}
+.lien-decor:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+.slide-line{
+    font-family: sans-serif;
+    text-decoration: none;
+    position: relative;
+}
+.slide-line::before{
+    content: "";
+    position: absolute;
+    background: white;
+    width: 62%;
+    height: 2px;
+    bottom: 10px;
+    transform-origin: 100% 0;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+.slide-line:hover::before{
+    transform-origin: 0 0;
+    transform: scaleX(1);
+} 
 /* ---------------------------------------------------header------------------------------------------------------- */
 header{
     position: fixed;
@@ -265,6 +343,7 @@ header{
 /* -------------------------------------------------Formations et Diplomes--------------------------------------- */
 #diplomes{
     background-color: #EBEBEB;
+    padding-bottom: 25px;
 }
 #logo-online{
     width: 80px;
@@ -310,12 +389,12 @@ header{
 /* -------------------------------------------------Experiences------------------------------------------------- */
 .box-timeline{
     width: 100%;
-    padding: 20px 0 250px 0;
+    padding: 20px 0 280px 0;
     margin-bottom: 100px;
     position: relative;
 }
 .ligne{
-    height: 1000px;
+    height: 1250px;
     width: 8px;
     margin: 0 0 0 10px;
     background: var(--main-color);
@@ -342,11 +421,11 @@ header{
     color: white;
 }
 .r3{
-    top: 692px;
+    top: 900px;
     color: white;
 }
 .r4{
-    top: 1000px;
+    top: 1255px;
     color: white;
 }
 .box{
@@ -368,10 +447,10 @@ header{
     top: 386px;
 }
 .b3{
-    top: 692px;
+    top: 900px;
 }
 .b4{
-    top: 1000px;
+    top: 1255px;
 }
 .experiences-p-intro{
     font-size: 0.7rem;
@@ -390,9 +469,29 @@ header{
     width: 22px;
     height: auto;
 }
+#experiences-img-time{
+    width: 22px;
+    height: auto;
+}
 #logo-stef{
     margin-left: 15px;
     width: 60px;
+    height: auto;
+}
+#logo-market{
+    margin-left: 15px;
+    width: 60px;
+    height: auto;
+}
+#logo-metro{
+    margin-left: 5px;
+    width: 50px;
+    height: auto;
+}
+#logo-transfret{
+    margin-left: 0px;
+    width: 63px;
+    height: auto;
 }
 .experiences-logo{
     transition: 1s;
@@ -406,6 +505,23 @@ header{
 }
 .experiences-corps{
     font-size: 0.8rem;
+}
+#a-button-cv{
+    font-size: 0.9rem;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 25px;
+    width: 200px;
+    color: white;
+    background-color: var(--second-color);
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+}
+#a-button-cv:hover{
+    color: var(--main-color);
+    background: var(--main-color);
+    border-radius: 15px;
 }
 /* -----------------------------------------------Centres d'intérêt--------------------------------------------- */
 #centres-interet{
@@ -446,6 +562,9 @@ footer{
     h1{
         padding: 30px 0 0;
     }
+    .slide-line::before{
+        width: 77%;
+    }
     .p-ouverture{
         padding: 20px 0;
     } 
@@ -455,11 +574,15 @@ footer{
     #adobe-span{
         padding-left: 8px;
     }
+    .box-timeline{
+        padding: 20px 0 230px 0;
+    }
     .box{
         padding: 15px;
     }
     .ligne{
         margin: 0 0 0 20px;
+        height: 1200px;
     }
     .rond{
         left: 24px;
@@ -482,10 +605,40 @@ footer{
     .experiences-corps{
         font-size: 1rem;
     }
+    .r3{
+        top: 840px;
+    }
+    .r4{
+        top: 1200px;
+    }
+    .b3{
+        top: 840px;
+    }
+    .b4{
+        top: 1200px;
+    }
     #logo-stef{
         width: 80px;
         height: auto;
         margin-left: 20px;
+    }
+    #logo-market{
+        width: 80px;
+        height: auto;
+        margin-left: 20px;
+    }
+    #logo-metro{
+        width: 80px;
+        height: auto;
+        margin-left: 20px;
+    }
+    #logo-transfret{
+        width: 80px;
+        height: auto;
+        margin-left: 20px;
+    }
+    #a-button-cv{
+        font-size: 1.1rem;
     }
 }
 @media(min-width: 992px){
@@ -517,7 +670,7 @@ footer{
         margin: 30px auto;
     }
     .box-timeline{
-        padding:80px 0 250px 0;
+        padding:80px 0 295px 0;
     }
     .box{
         width: 42%;
@@ -532,30 +685,64 @@ footer{
         left: 50%;
         font-size: 30px;
     }
+    .ligne{
+        height: 1358px;
+    }
+    .r2{
+        top: 435px;
+    }
+    .r3{
+        top: 1000px;
+    }
+    .r4{
+        top: 1380px;
+    }
     .b1{
         left: calc(50% - 27%);
     }
     .b2{
         left: calc(50% + 27%);
+        top: 435px;
     }
     .b3{
         left: calc(50% - 27%);
+        top: 1000px;
     }
     .b4{
         left: calc(50% + 27%);
+        top: 1380px;
     }
     #experiences h4{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     #logo-stef{
         width: 60px;
         height: auto;
         margin-left: 20px;
     }
+    #logo-market{
+        width: 90px;
+        height: auto;
+        margin-left: 15px;
+    }
+    #logo-metro{
+        width: 60px;
+        height: auto;
+        margin-left: 10px;
+    }
+    #logo-transfret{
+        width: 60px;
+        height: auto;
+        margin-left: 20px;
+    }
+    #a-button-cv{
+        font-size: 1.4rem;
+        width: 250px;
+    }
 }
 @media(min-width: 1200px){
     #experiences h4{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .experiences-corps{
         font-size: 1.1rem;
@@ -565,7 +752,86 @@ footer{
         height: auto;
         margin-left: 25px;
     }
+    #logo-metro{
+        width: 70px;
+        height: auto;
+        margin-left: 5px;
+    }
+    #logo-transfret{
+        width: 80px;
+        height: auto;
+        margin-left: 25px;
+    }
+    .ligne{
+        height: 1340px;
+    }
+    .r2{
+        top: 420px;
+    }
+    .r3{
+        top: 980px;
+    }
+    .r4{
+        top: 1360px;
+    }
+    .b2{
+        top: 420px;
+    }
+    .b3{
+        top: 980px;
+    }
+    .b4{
+        top: 1360px;
+    }
 }
 @media(min-width: 1400px){
-     
+    #logo-metro{
+        width: 65px;
+        height: auto;
+        margin-left: 10px;
+    } 
+    .box-timeline{
+        padding:80px 0 310px 0;
+    }
+    .ligne{
+        height: 1200px;
+    }
+    .r2{
+        top: 380px;
+    }
+    .r3{
+        top: 920px;
+    }
+    .r4{
+        top: 1280px;
+    }
+    .b2{
+        top: 380px;
+    }
+    .b3{
+        top: 920px;
+    }
+    .b4{
+        top: 1280px;
+    }
+}
+@media(min-width: 1600px){
+    .box-timeline{
+        padding:80px 0 215px 0;
+    }
+    .ligne{
+        height: 1160px;
+    }
+    .r3{
+        top: 850px;
+    }
+    .r4{
+        top: 1190px;
+    }
+    .b3{
+        top: 850px;
+    }
+    .b4{
+        top: 1190px;
+    }
 }
