@@ -52,6 +52,11 @@ html{
     align-items: center;
     justify-content: space-around;
 }
+.flex-end-center{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 h1{
     padding: 20px 0 0;
 }
@@ -430,79 +435,150 @@ header{
     height: 80%;
 }
     /* -----------------------------------------fin overlay----------------------------------------------------------- */
-.grayscale a img {
-	-webkit-filter: grayscale(100%);
-	filter: grayscale(100%);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+.overlay-svg{
+    color: white;
+    margin-right: 10px;
+}
+.grayscale img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
     width: 250px;
     height: 250px;
 }
-.grayscale a:hover img {
-	-webkit-filter: grayscale(0);
-	filter: grayscale(0);
+.grayscale:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
     transition: 1s;
 }
+.portfolio-overlay2{
+    position: relative;
+    padding: 0;
+    margin: 10px auto;
+    width: 250px;
+    height: 250px;
+}
+.portfolio-overlay2 img{
+    border-radius: 10px;
+}
+.overlay2{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+    transition: 0.5s ease;
+    border-radius: 10px;
+}
+.overlay2-div{
+    margin-top: 15px;
+}
+.overlay-sticker2 span{
+    background: var(--second-color);
+    border-radius: 10px;
+    padding: 6px;
+    margin: 10px 10px;
+    font-size: 0.7rem;
+}
+.overlay2 p{
+    margin: 2px auto 0;
+    font-size: 0.7rem;
+}
+.projet-persos-a2{
+    margin-top: 35px;
+    background: var(--main-color);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 0.8rem;
+} 
+.projet-persos-a2:hover{
+    color: black;
+    background: white;
+    box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.16);
+}
+.portfolio-overlay2:hover .overlay2{
+    height: 100%;
+}
+#overlay2-cercle-multi-color{
+    background: url("././images/portfolio/petites animations/Capture cercle multi-color.PNG");
+}
+#overlay2-animation-spinner{
+    background: url("././images/portfolio/petites animations/Capture animation spinner.PNG");
+}
+#overlay2-rectangle-hover{
+    background: url("././images/portfolio/petites animations/Capture animation hover rectangle.PNG");
+}
+#overlay2-photo-overlay-4-parties{
+    background: url("././images/portfolio/petites animations/Capture ecran overlay photo 4 parties.png");
+}
+#overlay2-cercles-3D{
+    background: url("././images/portfolio/petites animations/Capture ecran cercles 3D.png");
+}
     /* ---------------------------animation modal cercle multi-color------------------------- */
-    #modal-body-cercle-multi{
-        background: #282937;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow-x: hidden;
+#modal-body-cercle-multi{
+    background: #282937;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+.box-cercle-multi{
+    position: relative;
+    color: #f1f1f1;
+    cursor: pointer;
+    transition: transform 0.4s
+    cubic-bezier(0.23,1.83,0.42,1.19);
+}
+.box-cercle-multi:hover{
+    transform: scale(1.2);
+}
+.box-cercle-multi p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+.circle{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid #f1f1f1;
+    animation: 1s linear infinite alternate boxmagic,
+                4s linear infinite spinning;
+    padding-top: 240px;
+}
+@keyframes boxmagic {
+    from {
+        box-shadow: 
+        0 0 0#feac5e,
+        0 0 0#c779d0,
+        0 0 0#4bc0c8,
+        0 0 0#42db75;
     }
-    .box-cercle-multi{
-        position: relative;
-        color: #f1f1f1;
-        cursor: pointer;
-        transition: transform 0.4s
-        cubic-bezier(0.23,1.83,0.42,1.19);
+    to {
+        box-shadow: 
+        0 -10px 0#feac5e,
+        -10px 0 0#c779d0,
+        0 10px 0#4bc0c8,
+        10px 0 0#42db75;
     }
-    .box-cercle-multi:hover{
-        transform: scale(1.2);
+}
+@keyframes spinning {
+    from {
+        transform: rotate(0deg);
     }
-    .box-cercle-multi p{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        font-size: 20px;
-        letter-spacing: 3px;
+    to {
+        transform: rotate(360deg);
     }
-    .circle{
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        border: 3px solid #f1f1f1;
-        animation: 1s linear infinite alternate boxmagic,
-                    4s linear infinite spinning;
-        padding-top: 240px;
-    }
-    @keyframes boxmagic {
-        from {
-            box-shadow: 
-            0 0 0#feac5e,
-            0 0 0#c779d0,
-            0 0 0#4bc0c8,
-            0 0 0#42db75;
-        }
-        to {
-            box-shadow: 
-            0 -10px 0#feac5e,
-            -10px 0 0#c779d0,
-            0 10px 0#4bc0c8,
-            10px 0 0#42db75;
-        }
-    }
-    @keyframes spinning {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
+}
     /* -----------------------------------Fin animation modal cercle multi-color------------------------ */
     /* -------------------------------------Animation modal Spinner--------------------------------------- */
 #modal-body-Spinner-animation{
@@ -512,7 +588,7 @@ header{
     min-height: 100vh;
     background: #102626;
 }
-.container-loader{
+.box-Spinner-animation{
     position: relative;
     width: 100%;
     display: flex;
@@ -520,15 +596,15 @@ header{
     align-items: center;
     -webkit-box-reflect: below 1px linear-gradient(#0001,#0004);
 }
-.container-loader .loader{
+.box-Spinner-animation .load-Spinner-animation{
     position: relative;
     width: 200px;
     height: 200px;
     border-radius: 50%;
     background: #0d2323;
-    animation: animate 2s linear infinite;
+    animation: animate-spinner 2s linear infinite;
 }
-@keyframes animate {
+@keyframes animate-spinner {
     0%{
         transform: rotate(0deg);
     }
@@ -536,7 +612,7 @@ header{
         transform: rotate(360deg);
     }
 }
-.container-loader .loader::before{
+.box-Spinner-animation .load-Spinner-animation::before{
     content: '';
     position: absolute;
     top: 0;
@@ -549,7 +625,7 @@ header{
     border-top-left-radius: 100px;
     border-bottom-left-radius: 100px;
 }
-.container-loader .loader::after{
+.box-Spinner-animation .load-Spinner-animation::after{
     content: '';
     position: absolute;
     top: 0;
@@ -571,7 +647,7 @@ header{
                 0 0 90px #00fff9,
                 0 0 100px #00fff9;
 }
-.container-loader .loader span{
+.box-Spinner-animation .load-Spinner-animation span{
     position: absolute;
     top: 20px;
     left: 20px;
@@ -629,7 +705,160 @@ cursor:pointer;
     height:100%;
 }
     /* ----------------------------------------------fin animation hover rectangle qui se ferme------------------------- */
-
+    /* ----------------------animation photo overlay qui part en 4 parties------------------ */
+#modal-body-photo-overlay-4-parties{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: #141E30;
+    background: -webkit-linear-gradient(to top, #243B55, #141E30);
+    background: linear-gradient(to top, #243B55, #141E30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+.card-photo-overlay-4-parties{
+    border-radius: 16px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 50px rgba(#000,.85);
+}
+.img-photo-overlay-4-parties{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.img-photo-overlay-4-parties span{
+    width: 25%;
+    height: 100%;
+    background: url("../images/portfolio/petites animations/laptop-336373_640(1).jpg");
+    transition: .5s;
+}
+.img-photo-overlay-4-parties span:nth-child(1){
+    background-position: 0;
+    transition-delay: 0;
+}
+.img-photo-overlay-4-parties span:nth-child(2){
+    background-position: 33.33333%;
+    transition-delay: .1s;
+}
+.img-photo-overlay-4-parties span:nth-child(3){
+    background-position: 66.66666%;
+    transition-delay: .2s;
+}
+.img-photo-overlay-4-parties span:nth-child(4){
+    background-position: 100%;
+    transition-delay: .3s;
+}   
+.card-photo-overlay-4-parties:hover .img-photo-overlay-4-parties span{
+    transform: translateY(-100%);
+}
+.card-photo-overlay-4-parties:hover .content-photo-overlay-4-parties{
+    transform: translateY(0%);
+    transition: 1s;
+    transition-delay: .1s;
+}  
+.content-photo-overlay-4-parties{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 20px 20px;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    background-color: black;
+}
+.content-photo-overlay-4-parties h4{
+    font-size: 0.8rem;
+}
+.content-photo-overlay-4-parties{
+    font-size: 0.6rem;
+}
+    /* ---------------------fin animation photo overlay qui part en 4 parties------------------- */
+    /* -----------------------animation cercles 3D--------- */
+#modal-body-cercles-3D{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: radial-gradient(#78d5ff,#0081e8);
+}
+.loader-cercles-3D{
+    position: relative;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: perspective(500px) rotateX(45deg);
+}
+.loader-cercles-3D span{
+    position: absolute;
+    display: block;
+    border: 15px solid #fff;
+    box-sizing: border-box;
+    border-radius: 50%;
+    box-shadow: 0 10px 0 #e0e0e0, inset 0 10px 0 #e0e0e0;
+    animation: animate-cercles-3D 4.5s ease-in-out infinite;
+}
+.loader-cercles-3D span:nth-child(1){
+    animation-delay: 0s;
+}
+.loader-cercles-3D span:nth-child(2){
+    animation-delay: 1.5s;
+}
+.loader-cercles-3D span:nth-child(3){
+    animation-delay: 3s;
+}
+@keyframes animate-cercles-3D {
+    0%{
+        transform: translateZ(-100px);
+        width: 100%;
+        height: 100%;
+    }
+    25%{
+        transform: translateZ(100px);
+        width: 100%;
+        height: 100%;
+    }
+    50%{
+        transform: translateZ(100px);
+        width: 35%;
+        height: 35%;
+    }
+    75%{
+        transform: translateZ(-100px);
+        width: 35%;
+        height: 35%;
+    }
+    100%{
+        transform: translateZ(-100px);
+        width: 100%;
+        height: 100%;
+    }
+}
+    /* --------------------fin animation cercles 3D----------- */
+    /* 
+    -----------------Carousel-------------------------- */
+.carousel img{
+    border-radius: 10px;
+}
+#carousel-photoshop-2{
+    margin-top: 20px;
+}
+    /* --------------Fin Carousel----------------------- */
 /* -------------------------------------------------Formations et Diplomes--------------------------------------- */
 #diplomes{
     background-color: #EBEBEB;
