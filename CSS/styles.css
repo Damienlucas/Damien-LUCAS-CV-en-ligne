@@ -858,6 +858,12 @@ cursor:pointer;
 #carousel-photoshop-2{
     margin-top: 20px;
 }
+#carouselExampleIndicators-3{
+    display: none;
+}
+#carouselExampleIndicators-4{
+    display: none;
+}
     /* --------------Fin Carousel----------------------- */
 /* -------------------------------------------------Formations et Diplomes--------------------------------------- */
 #diplomes{
@@ -1122,6 +1128,19 @@ footer{
     .projet-persos-a{
         margin-top: 6px;
         font-size: 0.8rem;
+    }
+    #carousel-photoshop-2{
+        margin-top: 0;
+    }
+    #carouselExampleIndicators-3{
+        display: block;
+        margin-top: 15px;
+    }
+    #carouselExampleIndicators-4{
+        display: block;
+    }
+    #carouselExampleIndicators{
+        display: none;
     }
     .box-cercle-multi p{
         font-size: 25px;
