@@ -519,6 +519,15 @@ header{
 #overlay2-cercles-3D{
     background: url("././images/portfolio/petites animations/Capture ecran cercles 3D.png");
 }
+#overlay2-texte-clignotant{
+    background: url("././images/portfolio/petites animations/Capture-texte-clignotant.PNG");
+}
+#overlay2-bordure-qui-se-dessine{
+    background: url("././images/portfolio/petites animations/Capture-bordure-qui-se-dessine.PNG");
+}
+#svg-bordure-qui-se-dessine{
+    color: black;
+}
     /* ---------------------------animation modal cercle multi-color------------------------- */
 #modal-body-cercle-multi{
     background: #282937;
@@ -850,6 +859,285 @@ cursor:pointer;
     }
 }
     /* --------------------fin animation cercles 3D----------- */
+    /* ---------------------animation texte clignotant------- */
+#modal-body-texte-clignotant{
+    padding: 0;
+}
+#texte-clignotant-1{
+    background: #262626;
+    height: 180px;
+}
+.ul-texte-clignotant{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.ul-texte-clignotant li{
+    list-style: none;
+    color: #484848;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+    animation: flash-texte-clignotant 1.4s linear infinite;
+}
+@keyframes flash-texte-clignotant {
+    0% {
+        color: #484848;
+        text-shadow: none;
+    }
+    90% {
+        color: #484848;
+        text-shadow: none;
+    }
+    100% {
+        color: #fff900;
+        text-shadow: 0 0 7px #fff900, 0 0 50px #ff6c00;
+    }
+}
+.ul-texte-clignotant li:nth-child(1){
+    animation-delay: .1s;
+}
+.ul-texte-clignotant li:nth-child(2){
+    animation-delay: .2s;
+}
+.ul-texte-clignotant li:nth-child(3){
+    animation-delay: .3s;
+}
+.ul-texte-clignotant li:nth-child(4){
+    animation-delay: .4s;
+}
+.ul-texte-clignotant li:nth-child(5){
+    animation-delay: .5s;
+}
+.ul-texte-clignotant li:nth-child(6){
+    animation-delay: .6s;
+}
+.ul-texte-clignotant li:nth-child(7){
+    animation-delay: .7s;
+}
+.ul-texte-clignotant li:nth-child(8){
+    animation-delay: .8s;
+}
+.ul-texte-clignotant li:nth-child(9){
+    animation-delay: .9s;
+}
+#texte-clignotant-2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 180px;
+    background: #000;
+}
+.h5-texte-clignotant{
+    color: #111;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+.h5-texte-clignotant span{
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    animation: animate-texte-clignotant 2s linear infinite;
+}
+.h5-texte-clignotant span:nth-child(1){
+    animation-delay: 0s;
+}
+.h5-texte-clignotant span:nth-child(2){
+    animation-delay: 0.25s;
+}
+.h5-texte-clignotant span:nth-child(3){
+    animation-delay: 0.5s;
+}
+.h5-texte-clignotant span:nth-child(4){
+    animation-delay: 0.75s;
+}
+.h5-texte-clignotant span:nth-child(5){
+    animation-delay: 1s;
+}
+.h5-texte-clignotant span:nth-child(6){
+    animation-delay: 1.25s;
+}
+.h5-texte-clignotant span:nth-child(7){
+    animation-delay: 1.5s;
+}
+.h5-texte-clignotant span:nth-child(8){
+    animation-delay: 1.75s;
+}
+@keyframes animate-texte-clignotant{
+    0%,100%{
+        color: #fff;
+        filter: blur(2px);
+        text-shadow: 0 0 10px #00b3ff,
+                    0 0 20px #00b3ff,
+                    0 0 40px #00b3ff,
+                    0 0 80px #00b3ff,
+                    0 0 120px #00b3ff,
+                    0 0 200px #00b3ff,
+                    0 0 300px #00b3ff,
+                    0 0 400px #00b3ff;
+        
+    }
+    5%,95%{
+        color: #111;
+        filter: blur(0px);
+        text-shadow: none;
+    }
+}
+    /* -----------------fin animation texte clignotant------------- */
+    /* ------------------animation bordure qui se dessine et s'efface------------------- */
+#box-bordure-qui-se-dessine{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border: 3px solid transparent;
+}
+#top-bordure-qui-se-dessine, #bottom-bordure-qui-se-dessine, #left-bordure-qui-se-dessine, #right-bordure-qui-se-dessine {
+    position: absolute;
+    -webkit-animation: 8s linear infinite;
+            animation: 8s linear infinite;
+    }
+    #top-bordure-qui-se-dessine {
+    top: -3px;
+    left: -3px;
+    height: 3px;
+    -webkit-animation-name: top-bordure-qui-se-dessine;
+            animation-name: top-bordure-qui-se-dessine;
+    }
+    @keyframes top-bordure-qui-se-dessine {
+        25% {
+            width: 0;
+            background: #ffdb00;
+        }
+        38% {
+            width: calc(103%);
+            background: #ffdb00;
+        }
+        50% {
+            background: #ffdb00;
+        }
+        62% {
+            background: #ffdb00;
+        }
+        75% {
+            width: calc(103%);
+            background: #ffdb00;
+        }
+        88% {
+            left: auto;
+            right: -3px;
+            width: 0;
+            background: #ffdb00;
+        }
+    }
+    #bottom-bordure-qui-se-dessine {
+    bottom: -3px;
+    right: -3px;
+    height: 3px;
+    -webkit-animation-name: bottom-bordure-qui-se-dessine;
+            animation-name: bottom-bordure-qui-se-dessine;
+    }
+    @keyframes bottom-bordure-qui-se-dessine {
+        0% {
+            width: 0;
+        }
+        12% {
+            width: calc(103%);
+            background: #ffdb00;
+        }
+        25% {
+            background: #ffdb00;
+        }
+        38% {
+            background: #ffdb00;
+        }
+        50% {
+            width: calc(103%);
+            background: #ffdb00;
+        }
+        62% {
+            left: -3px;
+            width: 0;
+            background: #ffdb00;
+        }
+        75% {
+            background: #ffdb00;
+        }
+    }
+    #left-bordure-qui-se-dessine {
+    bottom: -3px;
+    left: -3px;
+    width: 3px;
+    -webkit-animation-name: left-bordure-qui-se-dessine;
+            animation-name: left-bordure-qui-se-dessine;
+    }
+    @keyframes left-bordure-qui-se-dessine {
+        12% {
+            height: 0;
+            background: #ffdb00;
+        }
+        25% {
+            height: calc(103%);
+            background: #ffdb00;
+        }
+        38% {
+            background: #ffdb00;
+        }
+        50% {
+            background: #ffdb00;
+        }
+        62% {
+            height: calc(103%);
+            background: #ffdb00;
+        }
+        75% {
+            top: -3px;
+            height: 0;
+            background: #ffdb00;
+        }
+        88% {
+            background: #ffdb00;
+        }
+    }
+    #right-bordure-qui-se-dessine {
+    top: -3px;
+    right: -3px;
+    width: 3px;
+    -webkit-animation-name: right-bordure-qui-se-dessine;
+            animation-name: right-bordure-qui-se-dessine;
+    }
+    @keyframes right-bordure-qui-se-dessine {
+        38% {
+            height: 0;
+            background: #ffdb00;
+        }
+        50% {
+            height: calc(103%);
+            background: #ffdb00;
+        }
+        62% {
+            background: #ffdb00;
+        }
+        75% {
+            background: #ffdb00;
+        }
+        88% {
+            height: calc(103%);
+            background: #ffdb00;
+        }
+        100% {
+            top: auto;
+            bottom: -3px;
+            height: 0;
+            background: #ffdb00;
+        }
+    }
+    /* ------------------fin animation bordure qui se dessine et s'efface------------------- */
     /* 
     -----------------Carousel-------------------------- */
 .carousel img{
@@ -1051,6 +1339,33 @@ cursor:pointer;
 /* -----------------------------------------------Centres d'intérêt--------------------------------------------- */
 #centres-interet{
     background-color: #EBEBEB;
+    padding: 0 0 20px 0;
+}
+#image-intro-interet{
+    width: 100%;
+    border-radius: 50%;
+}
+#img-interet-films{
+    width: 100%;
+    border-radius: 50%;
+}
+#centres-interet ul{
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+#div-img-interet-intro{
+    margin: auto;
+}
+#div-img-interet-films{
+    margin: auto;
+}
+#notes-musique{
+    width: 200px;
+    height: auto;
+}
+#gant-de-l-infini-yoda{
+    width: 100px;
+    height: auto;
 }
 /* ----------------------------------------------footer--------------------------------------------------------- */
 footer{
@@ -1066,6 +1381,9 @@ footer{
 }
 #footer-icone-linkedin{
     margin-right: 8px;
+}
+#row-footer{
+    padding-bottom: 100px;
 }
 /* -----------------------------------------------Animations---------------------------------------------------- */
 @keyframes clignote {
@@ -1101,6 +1419,9 @@ footer{
         margin-top: 20px;
         font-size: 0.8rem;
     }
+    #centres-interet ul{
+        font-size: 1rem;
+    }
 }
 @media(min-width: 768px){
     #h2-nav{
@@ -1128,6 +1449,9 @@ footer{
     .projet-persos-a{
         margin-top: 6px;
         font-size: 0.8rem;
+    }
+    .h5-texte-clignotant{
+        font-size: 5rem;
     }
     #carousel-photoshop-2{
         margin-top: 0;
@@ -1228,6 +1552,9 @@ footer{
     #a-button-cv{
         font-size: 1.1rem;
     }
+    #row-footer{
+        padding-bottom: 120px;
+    }
 }
 @media(min-width: 992px){
     .no-mobile{
@@ -1326,6 +1653,9 @@ footer{
     #a-button-cv{
         font-size: 1.4rem;
         width: 250px;
+    }
+    #row-footer{
+        padding-bottom: 0;
     }
 }
 @media(min-width: 1200px){
