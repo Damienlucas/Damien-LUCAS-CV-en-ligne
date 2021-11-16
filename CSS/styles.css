@@ -228,6 +228,15 @@ header{
 #h2-nav{
     padding: 8px 0;
 }
+.accordion-button-p{
+    margin: 0 0 0 15px;
+}
+#p-iframe, #p-adresse{
+    display: flex;
+}
+#p-iframe div{
+    margin-left: 10px;
+}
 /* -------------------------------------------------En-tête------------------------------------------------------- */
 #en-tete{
     background-color: black;
@@ -313,6 +322,7 @@ header{
 }
 #box-img-damien-front{
     position: relative;
+    perspective: 1000px;
 }
 .img-damien-morceaux{
     left: 40%;
@@ -358,6 +368,12 @@ header{
     /* transform: translate(19px, -137px); */
     z-index: 5;
     animation: hochement-tete 30s linear infinite;
+}
+#img-damien-index{
+    left: 33%;
+    top: 28%;
+    z-index: 5;
+    animation: hochement-index 30s linear infinite;
 }
 @keyframes rotate-rectangle {
     0%, 10% {
@@ -461,7 +477,7 @@ header{
             transform: rotate3d(0,2,0);
         }
         94%{
-            transform: rotate3d(0,0,0);;
+            transform: rotate3d(0,0,0);
         }
         95%{
             transform: rotate3d(0,0,1,15deg);
@@ -482,9 +498,96 @@ header{
             transform: rotate3d(0,0,1,-8deg);
         }
     }
-#img-skills{
+    @keyframes hochement-index {
+        0%, 13%{
+            transform: rotate3d(0,0,0);
+        }
+            15% {
+            transform: rotate3d(0,0,1,8deg);
+            }
+            20%{
+                transform: rotate3d(0,0,1,-8deg);
+            }
+            25%{
+                transform: rotate3d(0,0,1,8deg);
+            }
+            30%{
+                transform: rotate3d(0,0,1,-8deg);
+            }
+            35%{
+                transform: rotate3d(0,0,1,8deg);
+            }
+            40%{
+                transform: rotate3d(0,0,1,-8deg);
+            }
+            45%{
+                transform: rotate3d(0,0,1,8deg);
+            }
+            50%{
+                transform: rotate3d(0,0,1,-8deg);
+            }
+            55% {
+                transform: rotate3d(0,0,1,8deg);
+                }
+            60%{
+                transform: rotate3d(0,0,1,-8deg);
+            }
+            65%{
+                transform: rotate3d(0,0,1,8deg);
+            }
+            70%{
+                transform: rotate3d(0,0,1,-8deg);
+            }
+            75%{
+                transform: rotate3d(0,0,1,8deg);
+            }
+            80%{
+                transform: rotate3d(0,0,1,-8deg);
+            }
+            85%{
+                transform: rotate3d(0,0,1,8deg);
+            }
+            90%{
+                transform: rotate3d(0,0,1,-8deg);
+            }
+            94%{
+                transform: rotate3d(0,0,1,8deg);
+            }
+            95%{
+                transform: rotate3d(1,0,0,15deg);
+            }
+            96%{
+                transform: rotate3d(1,0,0,-8deg);
+            }
+            97%{
+                transform: rotate3d(1,0,0,15deg);
+            }
+            98%{
+                transform: rotate3d(1,0,0,-8deg);
+            }
+            99%{
+                transform: rotate3d(1,0,0,15deg);
+            }
+            100%{
+                transform: rotate3d(1,0,0,-8deg);
+            }
+        }
+/* #img-skills{
     width: 100%;
     height: auto;
+} */
+#deco-skills{
+    margin: 30px 0 15px 0;
+}
+#img-skills-gauche, #img-skills-centrale, #img-skills-droite{
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+    transition: 1s;
+}
+#img-skills-gauche:hover, #img-skills-centrale:hover, #img-skills-droite:hover{
+    transform: scale(1.2);
+    transition: 1s;
 }
 #skills-img-assesfirst{
     width: 60px;
@@ -535,6 +638,9 @@ header{
     height: auto;
     margin-left: 12px;
 }
+#img-figma{
+    margin-left: 12px;
+}
 .div-icone-bureautique{
     height: 42px;
     margin-bottom: 5px;
@@ -555,32 +661,38 @@ header{
     padding-bottom: 30px;
 }
     /* -----------------------------------------overlay------------------------------------------------------------- */
+.plus-overlay{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+}
 .portfolio-overlay{
     position: relative;
     padding: 0;
     margin: 10px auto;
+    height: 240px;
+    perspective: 1000px; 
 }
 .portfolio-overlay img{
     width: 100%;
-    height: auto;
+    height: 100%;
     border-radius: 10px;
 }
-.overlay{
-    position: absolute;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 15%;
+.overlay-back{ 
+    transform: rotateX(180deg);
     background: var(--second-color);
-    overflow: hidden;
-    transition: 0.5s ease;
     border-radius: 10px;
 }
-.overlay h5{
-    margin: 5px 0;
+.overlay-back h5{
+    margin: 15px 0 5px 0;
     font-size: 0.8rem;
 }
+.overlay-front, .overlay-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
 .overlay-sticker span{
     background: white;
     border-radius: 10px;
@@ -588,7 +700,7 @@ header{
     margin: 6px 10px;
     font-size: 0.7rem;
 }
-.overlay p{
+.overlay-back p{
     margin: 2px auto 0;
     font-size: 0.7rem;
 }
@@ -606,9 +718,16 @@ header{
     background: white;
     box-shadow: 3px 3px 5px 5px rgba(0,0,0,0.16);
 }
-.portfolio-overlay:hover .overlay{
-    height: 80%;
-}
+  .overlay-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .portfolio-overlay:hover .overlay-box {
+    transform: rotateX(180deg);
+  }
     /* -----------------------------------------fin overlay----------------------------------------------------------- */
 .overlay-svg{
     color: white;
@@ -700,7 +819,7 @@ header{
 #overlay2-bordure-qui-se-dessine{
     background: url("././images/portfolio/petites animations/Capture-bordure-qui-se-dessine.PNG");
 }
-#svg-bordure-qui-se-dessine{
+#svg-bordure-qui-se-dessine, #svg-hover-me{
     color: black;
 }
 #overlay2-dark-mod{
@@ -1625,10 +1744,7 @@ footer{
 }
 /* ---------------------------------media querry----------------------------------------------------------------- */
 @media(min-width: 500px){
-    .overlay{
-        height: 12%;
-    }
-    .overlay h5{
+    .overlay-back h5{
         font-size: 1rem;
         margin-top: 15px;
     }
@@ -1637,7 +1753,7 @@ footer{
         font-size: 0.8rem;
         margin: 15px 10px;
     }
-    .overlay p{
+    .overlay-back p{
         margin: 6px auto 0;
         font-size: 0.8rem;
     }
@@ -1659,16 +1775,16 @@ footer{
     .portfolio-overlay{
         margin: 10px auto;
     }
-    .overlay h5{
+    .overlay-back h5{
         font-size: 1rem;
-        margin-top: 4px;
+        margin-top: 15px;
     }
     .overlay-sticker span{
         padding: 8px;
         font-size: 0.8rem;
         margin: 8px 10px;
     }
-    .overlay p{
+    .overlay-back p{
         margin: 2px auto 0;
         font-size: 0.8rem;
     }
@@ -1888,12 +2004,15 @@ footer{
     }
 }
 @media(min-width: 1200px){
+    .portfolio-overlay {
+        height: 280px; 
+      }
     .overlay-sticker span{
         padding: 8px;
         font-size: 0.9rem;
         margin: 15px 10px;
     }
-    .overlay p{
+    .overlay-back p{
         margin: 6px auto 0;
         font-size: 0.9rem;
     }
@@ -1945,14 +2064,17 @@ footer{
     }
 }
 @media(min-width: 1400px){
-    .overlay h5{
+    .portfolio-overlay {
+        height: 300px; 
+      }
+    .overlay-back h5{
         font-size: 1.3rem;
     }
     .overlay-sticker span{
         margin: 15px 10px;
         font-size: 1rem;
     }
-    .overlay p{
+    .overlay-back p{
         margin: 6px auto 0;
         font-size: 1rem;
     }
@@ -1992,6 +2114,9 @@ footer{
     }
 }
 @media(min-width: 1600px){
+    .portfolio-overlay {
+        height: 350px; 
+      }
     .box-timeline{
         padding:80px 0 215px 0;
     }
