@@ -329,37 +329,47 @@ header{
     top: 50%;
     position: absolute;
     z-index: 90;
+    /* max-width: 14%;
+    max-height: 14%; */
 }
 #img-damien-rectangle-code{
-    transform: rotate(360deg) translate(-128px, 30px) rotate(-360deg);
+    /* transform: rotate(360deg) translate(-128px, 30px) rotate(-360deg); */
+    transform: rotate(360deg) translate(-190%, 60%) rotate(-360deg);
     animation: rotate-rectangle 30s linear infinite;
 }
 #img-damien-engrenage{
-    transform: rotate(360deg) translate(105px, 50px) rotate(-360deg);
+    /* transform: rotate(360deg) translate(105px, 50px) rotate(-360deg); */
+    transform: rotate(360deg) translate(208%, 115%) rotate(-360deg);
     animation: rotate-engrenage 30s linear infinite;
 }
 #img-damien-acolades{
-    transform: rotate(360deg) translate(-155px, -55px) rotate(-360deg);
+    /* transform: rotate(360deg) translate(-155px, -55px) rotate(-360deg); */
+    transform: rotate(360deg) translate(-485%, -220%) rotate(-360deg);
     animation: rotate-acolades 30s linear infinite;
 }
 #img-damien-crochet{
-    transform: rotate(360deg) translate(135px, -140px) rotate(-360deg);
+    /* transform: rotate(360deg) translate(135px, -140px) rotate(-360deg); */
+    transform: rotate(360deg) translate(293%, -413%) rotate(-360deg);
     animation: rotate-crochet 30s linear infinite;
 }
 #img-damien-croix{
-    transform: rotate(360deg) translate(-50px, -100px) rotate(-360deg);
+    /* transform: rotate(360deg) translate(-50px, -100px) rotate(-360deg); */
+    transform: rotate(360deg) translate(-160%, -405%) rotate(-360deg);
     animation: rotate-croix 30s linear infinite;
 }
 #img-damien-liste{
-    transform: rotate(360deg) translate(-80px, 70px) rotate(-360deg);
+    /* transform: rotate(360deg) translate(-80px, 70px) rotate(-360deg); */
+    transform: rotate(360deg) translate(-81%, 83%) rotate(-360deg);
     animation: rotate-liste 30s linear infinite;
 }
 #img-damien-lecture{
-    transform: rotate(360deg) translate(160px, 80px) rotate(-360deg);
+    /* transform: rotate(360deg) translate(160px, 80px) rotate(-360deg); */
+    transform: rotate(360deg) translate(230%, 160%) rotate(-360deg);
     animation: rotate-lecture 30s linear infinite;
 }
 #img-damien-tableau{
-    transform: translate(105px, -68px);
+    /* transform: translate(105px, -68px); */
+    transform: translate(71%, -76%);
     animation: hidden-tableau 30s linear infinite;
 }
 #img-damien-tete{
@@ -377,37 +387,37 @@ header{
 }
 @keyframes rotate-rectangle {
     0%, 10% {
-        transform: rotate(0deg) translate(-128px, 30px) rotate(-0deg);
+        transform: rotate(0deg) translate(-190%, 60%) rotate(-0deg);
         }
     }
 @keyframes rotate-engrenage {
     0%, 10% {
-        transform: rotate(0deg) translate(105px, 50px) rotate(-0deg);
+        transform: rotate(0deg) translate(208%, 115%) rotate(-0deg);
         }
     }
 @keyframes rotate-acolades {
     0%, 10% {
-        transform: rotate(0deg) translate(-155px, -55px) rotate(-0deg);
+        transform: rotate(0deg) translate(-485%, -220%) rotate(-0deg);
         }
     }
 @keyframes rotate-crochet {
     0%, 10% {
-        transform: rotate(0deg) translate(135px, -140px) rotate(-0deg);
+        transform: rotate(0deg) translate(293%, -413%) rotate(-0deg);
         }
     }
 @keyframes rotate-croix {
     0%, 10% {
-        transform: rotate(0deg) translate(-50px, -100px) rotate(-0deg);
+        transform: rotate(0deg) translate(-160%, -405%) rotate(-0deg);
         }
     }
 @keyframes rotate-liste {
     0%, 10% {
-        transform: rotate(0deg) translate(-80px, 70px) rotate(-0deg);
+        transform: rotate(0deg) translate(-81%, 83%) rotate(-0deg);
         }
     }
 @keyframes rotate-lecture {
     0%, 10% {
-        transform: rotate(0deg) translate(160px, 80px) rotate(-0deg);
+        transform: rotate(0deg) translate(230%, 160%) rotate(-0deg);
         }
     }
 @keyframes hidden-tableau {
@@ -1611,7 +1621,7 @@ width: 3px;
     top: 1255px;
 }
 .experiences-p-intro{
-    font-size: 0.7rem;
+    font-size: 0.55rem;
 }
 .experiences-p-intro span{
     margin: 0 2px;
@@ -1623,7 +1633,7 @@ width: 3px;
 #experiences a:hover{
     color: white;
 }
-#experiences-img-calendar{
+.experiences-img-calendar{
     width: 22px;
     height: auto;
 }
@@ -1911,6 +1921,9 @@ footer{
     .p-a-propos{
         margin-bottom: 0;
     }
+    .experiences-p-intro{
+        font-size: 0.65rem;
+    }
     .img-cms{
         width: 60px;
         height: auto;
@@ -2069,6 +2082,9 @@ footer{
       }
     .overlay-back h5{
         font-size: 1.3rem;
+    }
+    .experiences-p-intro{
+        font-size: 0.75rem;
     }
     .overlay-sticker span{
         margin: 15px 10px;

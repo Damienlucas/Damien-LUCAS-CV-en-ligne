@@ -203,7 +203,6 @@ div#tarteaucitronServices {
         top: 0 !important;
         width: 100% !important;
     }
-
     #tarteaucitron .tarteaucitronBorder {
         border: 0 !important;
     }
@@ -373,7 +372,7 @@ div#tarteaucitronServices {
     text-decoration: none;
     padding: 4px 0;
     position: absolute;
-    right: 0;
+    left: 0;
     text-align: center;
     width: 70px;
 }
@@ -410,6 +409,7 @@ div#tarteaucitronServices {
     font-weight: 700;
     margin: 20px 0px 0px;
     padding: 5px 20px;
+    right: 30%;
     text-align: left;
     width: auto;
     background: #333;
@@ -750,7 +750,7 @@ span#tarteaucitronDisclaimerAlert {
     display: none;
     padding: 0;
     position: fixed;
-    right: 0;
+    left: 0;
     text-align: center;
     width: auto;
     z-index: 2147483646;
@@ -991,4 +991,16 @@ span.tarteaucitronTitle.tarteaucitronH3 {
 
 .tarteaucitron-display-none {
     display: none;
+}
+@media(min-width: 768px) and (max-width: 990px){
+    #tarteaucitronAlertSmall{
+        bottom: 0.8%;
+        left: 45%;
+    }
+}
+@media(max-width: 767px){
+    #tarteaucitronAlertSmall{
+    left: 30%;
+    bottom: 1%;
+}
 }

@@ -4,16 +4,16 @@ tarteaucitron.init({
     "hashtag": "#tarteaucitron", /* Open the panel with this hashtag */
     "cookieName": "tarteaucitron", /* Cookie name */
 
-    "orientation": "middle", /* Banner position (top - bottom) */
+    "orientation": "bottom", /* Banner position (top - bottom) */
  
     "groupServices": false, /* Group services by category */
                      
-    "showAlertSmall": false, /* Show the small banner on bottom right */
+    "showAlertSmall": true, /* Show the small banner on bottom right */
     "cookieslist": false, /* Show the cookie list */
                      
     "closePopup": false, /* Show a close X on the banner */
 
-    "showIcon": true, /* Show cookie icon to manage cookies */
+    "showIcon": false, /* Show cookie icon to manage cookies */
     //"iconSrc": "", /* Optionnal: URL or base64 encoded image */
     "iconPosition": "BottomRight", /* BottomRight, BottomLeft, TopRight and TopLeft */
 
