@@ -311,13 +311,10 @@ header{
     margin-left: 5px;
 }
 .decor-competences{
-    /* width: 50%;
-    height: auto;
-    display: none;
-    border-radius: 15px; */
     width: 100%;
     height: auto;
-    /* display: none; */
+    max-width: 600px;
+    max-height: 400px;
     border-radius: 15px;
 }
 #box-img-damien-front{
@@ -329,60 +326,83 @@ header{
     top: 50%;
     position: absolute;
     z-index: 90;
-    /* max-width: 14%;
-    max-height: 14%; */
 }
 #img-damien-rectangle-code{
-    /* transform: rotate(360deg) translate(-128px, 30px) rotate(-360deg); */
     transform: rotate(360deg) translate(-190%, 60%) rotate(-360deg);
+    max-width: 12.5%;
+    max-height: 12.5%;
+    left: 39.5%;
+    top: 51%;
     animation: rotate-rectangle 30s linear infinite;
 }
 #img-damien-engrenage{
-    /* transform: rotate(360deg) translate(105px, 50px) rotate(-360deg); */
     transform: rotate(360deg) translate(208%, 115%) rotate(-360deg);
+    max-width: 11.5%;
+    max-height: 11.5%;
+    left: 42%;
+    top: 51%;
     animation: rotate-engrenage 30s linear infinite;
 }
 #img-damien-acolades{
-    /* transform: rotate(360deg) translate(-155px, -55px) rotate(-360deg); */
     transform: rotate(360deg) translate(-485%, -220%) rotate(-360deg);
+    max-width: 6.5%;
+    max-height: 6.5%;
+    left: 39%;
+    top: 48%;
     animation: rotate-acolades 30s linear infinite;
 }
 #img-damien-crochet{
-    /* transform: rotate(360deg) translate(135px, -140px) rotate(-360deg); */
     transform: rotate(360deg) translate(293%, -413%) rotate(-360deg);
+    max-width: 8.5%;
+    max-height: 8.5%;
+    left: 43%;
+    top: 47%;
     animation: rotate-crochet 30s linear infinite;
 }
 #img-damien-croix{
-    /* transform: rotate(360deg) translate(-50px, -100px) rotate(-360deg); */
     transform: rotate(360deg) translate(-160%, -405%) rotate(-360deg);
+    max-width: 6%;
+    max-height: 6%;
+    left: 39.5%;
+    top: 48%;
     animation: rotate-croix 30s linear infinite;
 }
 #img-damien-liste{
-    /* transform: rotate(360deg) translate(-80px, 70px) rotate(-360deg); */
     transform: rotate(360deg) translate(-81%, 83%) rotate(-360deg);
+    max-width: 21%;
+    max-height: 21%;
     animation: rotate-liste 30s linear infinite;
 }
 #img-damien-lecture{
-    /* transform: rotate(360deg) translate(160px, 80px) rotate(-360deg); */
     transform: rotate(360deg) translate(230%, 160%) rotate(-360deg);
+    max-width: 12.5%;
+    max-height: 12.5%;
+    left: 42%;
+    top: 52%;
     animation: rotate-lecture 30s linear infinite;
 }
 #img-damien-tableau{
-    /* transform: translate(105px, -68px); */
     transform: translate(71%, -76%);
+    max-width: 24.5%;
+    max-height: 24.5%;
+    left: 41.5%;
+    top: 50%;
     animation: hidden-tableau 30s linear infinite;
 }
 #img-damien-tete{
-    left: 42%;
-    top: 11%;
-    /* transform: translate(19px, -137px); */
+    left: 42.5%;
+    top: 13%;
     z-index: 5;
+    max-width: 25%;
+    max-height: 25%;
     animation: hochement-tete 30s linear infinite;
 }
 #img-damien-index{
-    left: 33%;
+    left: 33.5%;
     top: 28%;
     z-index: 5;
+    max-width: 7.5%;
+    max-height: 7.5%;
     animation: hochement-index 30s linear infinite;
 }
 @keyframes rotate-rectangle {
@@ -582,10 +602,6 @@ header{
                 transform: rotate3d(1,0,0,-8deg);
             }
         }
-/* #img-skills{
-    width: 100%;
-    height: auto;
-} */
 #deco-skills{
     margin: 30px 0 15px 0;
 }
@@ -1518,10 +1534,6 @@ width: 3px;
     height: auto;
     margin-left: 20px;
 }
-.img-calendrier{
-    width: 25px;
-    height: auto;
-}
 .diplome-p-intro{
     font-size: 0.8rem;
 }
@@ -1634,10 +1646,6 @@ width: 3px;
     color: white;
 }
 .experiences-img-calendar{
-    width: 22px;
-    height: auto;
-}
-#experiences-img-time{
     width: 22px;
     height: auto;
 }
@@ -1754,6 +1762,10 @@ footer{
 }
 /* ---------------------------------media querry----------------------------------------------------------------- */
 @media(min-width: 500px){
+    #img-damien-index{
+        left: 33%;
+        top: 28.5%;
+    }
     .overlay-back h5{
         font-size: 1rem;
         margin-top: 15px;
@@ -1773,6 +1785,11 @@ footer{
     }
     #centres-interet ul{
         font-size: 1rem;
+    }
+}
+@media(min-width: 600px){
+    #img-damien-index{
+        left: 33.5%;
     }
 }
 @media(min-width: 768px){
@@ -1911,7 +1928,17 @@ footer{
         padding-bottom: 120px;
     }
 }
+@media(min-width: 800px){
+    #img-damien-index{
+        left: 33%;
+    }
+}
 @media(min-width: 992px){
+    #img-damien-index{
+        max-height: 8%;
+        max-width: 8%;
+        left: 33.5%;
+    }
     .no-mobile{
         display: block;
     }
@@ -1930,9 +1957,6 @@ footer{
     }
     .container-fluid{
         flex-direction: column;
-    }
-    .decor-competences{
-        display: block;
     }
     header{
         position: fixed;
@@ -2016,7 +2040,17 @@ footer{
         padding-bottom: 0;
     }
 }
+@media(min-width: 1100px){
+    #img-damien-index{
+        left: 33%;
+        top: 28.5%;
+    }
+}
 @media(min-width: 1200px){
+    #img-damien-index{
+        left: 33%;
+        top: 28%;
+    }
     .portfolio-overlay {
         height: 280px; 
       }
@@ -2130,6 +2164,10 @@ footer{
     }
 }
 @media(min-width: 1600px){
+    #img-damien-tete{
+        left: 42.5%;
+        top: 13.5%;
+    }
     .portfolio-overlay {
         height: 350px; 
       }
@@ -2150,5 +2188,71 @@ footer{
     }
     .b4{
         top: 1190px;
+    }
+}
+@media(min-width: 1700px){
+    #img-damien-tete{
+        left: 43%;
+        top: 15%;
+    }
+    #img-damien-index{
+        left: 33.3%;
+        top: 28.5%;
+    }
+    #img-damien-tableau{
+        left: 42.5%;
+        top: 49.5%;
+    }
+}
+@media(min-width: 1800px){
+    #img-damien-tete{
+        left: 43.2%;
+        top: 14.5%;
+    }
+    #img-damien-index{
+        left: 34.5%;
+        top: 28%;
+        max-height: 9%;
+        max-width: 9%;
+    }
+    #img-damien-tableau{
+        left: 43%;
+        top: 49.5%;
+    }
+    #img-damien-engrenage{
+        left: 43%;
+        top: 52%;
+    }
+    #img-damien-croix{
+        left: 40%;
+        top: 48%;
+    }
+}
+@media(min-width: 1900px){
+    #img-damien-tete{
+        left: 43.6%;
+        top: 14.5%;
+    }
+    #img-damien-index{
+        left: 35.2%;
+    }
+    #img-damien-rectangle-code{
+        left: 40.5%;
+    }
+}
+@media(min-width: 2000px){
+    #img-damien-tete{
+        left: 44%;
+        top: 14.2%;
+    }
+    #img-damien-index{
+        left: 36%;
+        top: 28%;
+    }
+    #img-damien-croix{
+        left: 41%;
+    }
+    #img-damien-tableau{
+        left: 43.5%;
     }
 }
